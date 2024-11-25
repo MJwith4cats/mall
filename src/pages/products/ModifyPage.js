@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import ModifyComponent from "../../components/product/ModifyComponent"
+import ModifyComponent from "../../components/products/ModifyComponent"
 
 const ModifyPage = () =>{
     const {pno} = useParams()

@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
+import store from './store.js'
 
 
 //configureStore()에서 생성되는 Store를 애플리케이션에 적용하기 위해서 index.js 파일을 수정

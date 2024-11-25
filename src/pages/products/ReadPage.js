@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import ReadComponent from "../../components/product/ReadComponent"
+import ReadComponent from "../../components/products/ReadComponent"
 
 const ReadPage = () => {
 

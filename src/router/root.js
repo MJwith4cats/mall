@@ -2,6 +2,8 @@ import { Suspense, lazy } from "react";
 import MainPage from "../pages/MainPage";
 import todoRouter from "./todoRouter";
 import productsRouter from "./productsRouter";
+import memberRouter from "./memberRouter";
+
 const{ createBrowserRouter } = require("react-router-dom");
 
 const Loading = <div className="bg-red-700">Loading...</div>
@@ -19,17 +21,18 @@ const ProductsIndex = lazy(() => import("../pages/products/IndexPage"))
      },{
         path: "about",
         element: <Suspense fallback={Loading}><About/></Suspense>
-     },
-     {
+     },{
         path:"todo",
         element: <Suspense fallback={Loading}><TodoIndex/></Suspense>,
         children : todoRouter()
-     },
-     {
+     },{
       path: "products",
       element : <Suspense fallback={Loading}><ProductsIndex/></Suspense>,
       children : productsRouter()
-     }  
+     },{
+       path:"member",
+       children: memberRouter()
+     }
  ])
 
 export default root;
